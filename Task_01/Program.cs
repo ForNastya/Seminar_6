@@ -1,12 +1,19 @@
 ﻿// Найти точку пересечения двух прямых заданных уравнением y = k1 * x + b1, y = k2 * x + b2, b1 k1 и b2 и k2 заданы
-string X(int k1, int k2, int b1, int b2)
+Console.WriteLine("Введите значение к1");
+int k1 = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите значение b1");
+int b1 = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите значение к2");
+int k2 = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите значение b2");
+int b2 = int.Parse(Console.ReadLine());
+
+if (k1 == k2)
+Console.WriteLine("Прямые паралельны ");
+
+else
 {
-    string result = string.Empty;
-    int x = 0;
-    int y = 0;
-    x = (b2 - b1) / (k1 - k2);
-    y = (k1 * (b2 -b1) / (k1 - k2)) + b1;
-    result = $"({x}, {y})";
-    return result;
+    double x = (b2 - b1) / (k1 - k2);
+    double y = k1 * x + b1;
+    Console.WriteLine($"Координаты точки пересечения: x ={x}, y = {y}");
 }
-Console.WriteLine(X(2, -3, -3, 2));
