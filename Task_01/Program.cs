@@ -9,7 +9,7 @@ Console.WriteLine("Введите значение b2");
 int b2 = int.Parse(Console.ReadLine());
 
 if (k1 == k2)
-Console.WriteLine("Прямые паралельны ");
+Console.WriteLine("Прямые параллельны ");
 
 else
 {
